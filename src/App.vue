@@ -1,28 +1,28 @@
 <template>
   <div id="app">
     <p>app container</p>
-    <news-Lists :news="newsList"/>
-        <news-Lists >hggygi</news-Lists>
+    <news-lists :news="newsLists"></news-lists>
+        <!-- <news-Lists >hggygi</news-Lists> -->
 
-    <!-- <news-detail :newsItem="newsItemSelected"></news-detail> -->
+    <!-- <news-details :newsItem="newsItemSelected"></news-detail> -->
   </div>
 </template>
 
 <script>
   import NewsLists from './components/NewsLists.vue';
-  import NewsDetails from './components/NewsDetails.vue';
+  // import NewsDetails from './components/NewsDetails.vue';
 
   export default {
-    name: "app",
-    components: {
-      "news-lists": NewsLists,
-      "news-detail":NewsDetails
-    },
+    // name: "app",
     data (){
       return {
-        newsList: [],
+        newsLists: [],
         newsItemSelected: {},
       }
+    },
+    components: {
+      "news-lists": NewsLists,
+      // "news-details":NewsDetails
     },
     mounted() {
         fetch(`https://content.guardianapis.com/search?q=javascript&format=json&api-key=test`)
