@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p>app container</p>
+    <news-Lists :news="newsList"/>
+        <news-Lists >hggygi</news-Lists>
+
+    <!-- <news-detail :newsItem="newsItemSelected"></news-detail> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import NewsLists from './components/NewsLists.vue';
+  import NewsDetails from './components/NewsDetails.vue';
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+    name: "app",
+    components: {
+      "news-lists": NewsLists,
+      "news-detail":NewsDetails
+    },
+    data (){
+      return {
+        newsList: [],
+        newsItemSelected: {},
+      }
+    },
+    mounted() {
+        fetch(`https://content.guardianapis.com/search?q=javascript&format=json&api-key=test`)
+        .then(res => res.json())
+        .then(news => this.news = news)
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
