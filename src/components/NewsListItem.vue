@@ -1,12 +1,20 @@
 <template>
-  <div>
-    <h2 v-if="newsItem">{{newsItem.webTitle}}</h2>
-  </div>
+    <div>
+        <li v-on:click="handleClick">{{newsItem.webTitle}}</li>
+    </div>
 </template>
 
 <script>
-export default {
+import { eventBus } from '../main.js'
 
+export default {
+    name: 'news-list-sort',
+    props: ['newsItem'],
+    methods: {
+        handleClick() {
+            eventBus.$emit('news-item-selected', this.newsItem)
+        }
+    }
 }
 </script>
 

@@ -1,33 +1,37 @@
 <template>
   <div id="app">
-    <p>app container</p>
-    <news-lists :news="newsLists"></news-lists>
-        <!-- <news-Lists >hggygi</news-Lists> -->
-
-    <!-- <news-details :newsItem="newsItemSelected"></news-detail> -->
+    <h1>The Latest News of Javascript</h1>
+    <h3>Powered by The Guardian</h3>
+    <news-lists :news="newsList"></news-lists>
+    <news-details :newsItem="selectedNewsItem"></news-details>
   </div>
 </template>
 
 <script>
   import NewsLists from './components/NewsLists.vue';
-  // import NewsDetails from './components/NewsDetails.vue';
+  import NewsDetails from './components/NewsDetails.vue';
+  import { eventBus } from './main.js'
 
   export default {
-    // name: "app",
+    name: "app",
     data (){
       return {
-        newsLists: [],
-        newsItemSelected: {},
+        newsList: [],
+        selectedNewsItem: null,
       }
-    },
-    components: {
-      "news-lists": NewsLists,
-      // "news-details":NewsDetails
     },
     mounted() {
         fetch(`https://content.guardianapis.com/search?q=javascript&format=json&api-key=test`)
         .then(res => res.json())
-        .then(news => this.news = news)
+        .then(news => this.newsList = news.response.results)
+
+        eventBus.$on('news-item-selected', (newsItem) => {
+          this.selectedNewsItem = newsItem
+        })
+    },
+    components: {
+      "news-lists": NewsLists,
+      "news-details": NewsDetails
     }
   }
 </script>
