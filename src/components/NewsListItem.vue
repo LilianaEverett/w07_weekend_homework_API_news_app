@@ -1,6 +1,8 @@
 <template>
-    <div>
-        <li v-on:click="handleClick">{{newsItem.webTitle}}</li>
+    <div class="list-item">
+        <ul>
+            <li v-on:click="handleClick">{{newsItem.webTitle}}</li>
+        </ul>
     </div>
 </template>
 
@@ -19,5 +21,13 @@ export default {
 </script>
 
 <style>
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border: ridge olivedrab;
+}
 
+ul{
+    list-style-type: none;
+}
 </style>
