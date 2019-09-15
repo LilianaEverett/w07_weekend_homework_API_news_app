@@ -28,6 +28,10 @@
         eventBus.$on('news-item-selected', (newsItem) => {
           this.selectedNewsItem = newsItem
         })
+
+        // eventBus.$on('news-list-item', (news) => {
+        //   this.newsList = newsList
+        // })
     },
     components: {
       "news-lists": NewsLists,

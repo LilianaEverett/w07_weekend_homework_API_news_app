@@ -3,7 +3,7 @@
         <ul>
             <li v-if="newsItem">{{newsItem.webTitle}}</li>
             <li v-if="newsItem">{{newsItem.webPublicationDate}}</li>
-            <a v-if="newsItem" href="newsItem.webUrl">Read More</a>
+            <a v-if="newsItem" v-bind:href="newsItem.webUrl" target="_blank">Read More</a>
         </ul>
     </div>
 </template>
