@@ -1,12 +1,12 @@
 # javascript News app
 
-## Brief:
+### Learning Objectives
 
-Weekend Homework: Vue Application with Requests
-Learning Objectives
-Be able to create a multi-component web application, with Vue
-Be able to make API requests to load JSON data into your application
-Brief
+- Be able to create a multi-component web application, with Vue
+- Be able to make API requests to load JSON data into your application
+
+## Brief
+
 Your task is to create an application that makes a request to an API and displays the data.
 
 ### MVP:
