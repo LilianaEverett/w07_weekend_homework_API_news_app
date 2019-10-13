@@ -1,5 +1,7 @@
-# javascript_news_app
-Brief:
+# javascript News app
+
+## Brief:
+
 Weekend Homework: Vue Application with Requests
 Learning Objectives
 Be able to create a multi-component web application, with Vue
@@ -7,12 +9,8 @@ Be able to make API requests to load JSON data into your application
 Brief
 Your task is to create an application that makes a request to an API and displays the data.
 
-Suggested APIs:
+### MVP:
 
-Guardian search: https://content.guardianapis.com/search?q=brexit&format=json&api-key=test
-These APIs all allow browser requests without authentication or keys. (In the case of the Guardian, api-key=test should be sufficient.)
-
-MVP
 The application should display data from an API request.
 The application should have a clear separation of concerns (multiple components)
 Take input from the user to update the page. You could update the page by filtering or manipulating the data on user interaction, or you might make further API requests to load more data that is then displayed.
@@ -22,7 +20,11 @@ Take input from the user to update the page. You could update the page by filter
 Guardian search: https://content.guardianapis.com/search?q=brexit&format=json&api-key=test
 These APIs all allow browser requests without authentication or keys. (In the case of the Guardian, api-key=test should be sufficient.)
 
-To view the application running:
+## To view the application running:
+
 download or clone the repository
-in the terminal: cd into the repository folder then npm install
+in the terminal: cd into the repository folder 
+`npm install`
+`cd public`
+`npm run serve`
 
