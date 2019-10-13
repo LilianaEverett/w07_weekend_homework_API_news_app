@@ -32,3 +32,6 @@ In the terminal: cd into the repository folder
 
 `npm run serve`
 
+In the browser:
+
+http://localhost:8080/ 
