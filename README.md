@@ -1,4 +1,4 @@
-# javascript News app
+# Javascript News app
 
 ### Learning Objectives
 
@@ -7,7 +7,7 @@
 
 ## Brief
 
-Your task is to create an application that makes a request to an API and displays the data.
+Create an application that makes a request to an API and displays the data.
 
 ### MVP:
 
