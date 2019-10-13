@@ -24,6 +24,7 @@ These APIs all allow browser requests without authentication or keys. (In the ca
 
 download or clone the repository
 in the terminal: cd into the repository folder 
+
 `npm install`
 
 `cd public`
