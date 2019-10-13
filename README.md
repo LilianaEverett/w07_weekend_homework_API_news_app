@@ -35,3 +35,5 @@ In the terminal: cd into the repository folder
 In the browser:
 
 http://localhost:8080/ 
+
+Screenshot 2019-10-13 at 15.17.58
