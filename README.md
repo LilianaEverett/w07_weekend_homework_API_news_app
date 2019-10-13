@@ -17,7 +17,7 @@ The application should display data from an API request.
 The application should have a clear separation of concerns (multiple components)
 Take input from the user to update the page. You could update the page by filtering or manipulating the data on user interaction, or you might make further API requests to load more data that is then displayed.
 
-##Chosen API:
+## Chosen API:
 
 Guardian search: https://content.guardianapis.com/search?q=brexit&format=json&api-key=test
 These APIs all allow browser requests without authentication or keys. (In the case of the Guardian, api-key=test should be sufficient.)
